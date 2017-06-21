@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{213F39F1-BE43-407F-A7A4-0A7117B2471C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Fireworks/AppDelegate.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Fireworks/Main.storyboard">
     <Files>
       <File FileName="Fireworks/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="Fireworks/Main.storyboard" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
