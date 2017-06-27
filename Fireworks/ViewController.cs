@@ -21,6 +21,11 @@ namespace Fireworks {
             };
         }
 
+        partial void ButtonAbout_TouchUpInside(UIButton sender) {
+            var aboutViewController = (AboutViewController)Storyboard.InstantiateViewController("AboutViewController");
+            this.PresentViewController(aboutViewController, true, null);
+        }
+
         partial void SliderSize_ValueChanged(UISlider sender) {
             fireworks.ScaleMax = (nfloat)sliderSize.Value;
         }

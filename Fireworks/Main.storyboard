@@ -58,6 +58,15 @@
                                     <action selector="SliderSize_ValueChanged:" destination="BYZ-38-t0r" id="90" eventType="valueChanged"/>
                                 </connections>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" lineBreakMode="middleTruncation" id="114" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="270" y="20" width="22" height="22"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ButtonAbout_TouchUpInside:" destination="BYZ-38-t0r" id="117" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint id="13" firstItem="5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16"/>
@@ -72,6 +81,8 @@
                             <constraint id="83" firstItem="8bC-Xf-vdC" firstAttribute="trailingMargin" secondItem="12" secondAttribute="trailing" constant="3"/>
                             <constraint id="84" firstItem="12" firstAttribute="leading" secondItem="8" secondAttribute="centerX" constant="47"/>
                             <constraint id="85" firstItem="12" firstAttribute="centerY" secondItem="8" secondAttribute="centerY"/>
+                            <constraint id="115" firstItem="114" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20"/>
+                            <constraint id="116" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="114" secondAttribute="trailing" constant="28"/>
                         </constraints>
                     </view>
                     <connections>
@@ -80,11 +91,58 @@
                         <outlet property="switchNight" destination="9" id="name-outlet-9"/>
                         <outlet property="nightLabel" destination="5" id="name-outlet-5"/>
                         <outlet property="sizeLabel" destination="8" id="name-outlet-8"/>
+                        <outlet property="buttonAbout" destination="114" id="name-outlet-114"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <scene sceneID="107">
+            <objects>
+                <viewController id="108" sceneMemberID="viewController" customClass="AboutViewController" storyboardIdentifier="AboutViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="105"/>
+                        <viewControllerLayoutGuide type="bottom" id="106"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="109">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="112" translatesAutoresizingMaskIntoConstraints="NO" text="About Fireworks">
+                                <rect key="frame" x="78" y="73" width="163" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="118" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="114" y="418" width="92" height="30"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="CloseButton_TouchUpInside:" destination="108" id="119" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint id="130" firstItem="112" firstAttribute="leading" secondItem="109" secondAttribute="leadingMargin" constant="62"/>
+                            <constraint id="132" firstItem="109" firstAttribute="trailingMargin" secondItem="112" secondAttribute="trailing" constant="63"/>
+                            <constraint id="133" firstItem="112" firstAttribute="top" secondItem="105" secondAttribute="bottom" constant="53"/>
+                            <constraint id="134" firstItem="118" firstAttribute="leading" secondItem="109" secondAttribute="leadingMargin" constant="98"/>
+                            <constraint id="135" firstItem="109" firstAttribute="trailingMargin" secondItem="118" secondAttribute="trailing" constant="98"/>
+                            <constraint id="136" firstItem="106" firstAttribute="top" secondItem="118" secondAttribute="bottom" constant="32"/>
+                            <constraint id="137" firstItem="118" firstAttribute="top" secondItem="112" secondAttribute="bottom" constant="324"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="118" id="name-outlet-118"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="110" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="334" y="-57"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
